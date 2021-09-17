@@ -1,0 +1,24 @@
+header{
+     background-color: salmon;}
+     main{
+         background-color: pink;
+     }
+     footer{
+         background: plum;
+     }
+     h1, h2, h3, h4, h5, h6{
+         font-family: fantasy;
+         font-style: italic;
+
+     }
+     h2 {   
+        display: block;
+        font-size: 1.5em;
+        margin: 0px;
+        font-weight: bold;
+
+    }
+    .wrapper{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
