@@ -6,15 +6,22 @@ header{
      footer{
          background: plum;
      }
-     h1, h2, h3, h4, h5, h6{
+     h1, h2, h3, h5, h6{
          font-family: fantasy;
          font-style: italic;
 
      }
+     h4{
+        font-family: 'Ephesis', cursive;
+     }
+     h3{
+         text-align: center;
+         margin-bottom: 10px;
+         font-size: 2em;
+     }
      h2 {   
         display: block;
         font-size: 3em;
-        margin: 0px;
         font-weight: bold;
         color: white;
 
@@ -27,9 +34,9 @@ header{
         margin: 0px;
      
     }
-    .bg{
-        background: url(../img/index_pudge.jpg) no-repeat;
-        background-size: cover;
+    .main{
+        background: url(../img/spacebg.jpg) no-repeat;
+        background-size:cover;
         height: 100vh;
     }
    .main nav{
@@ -38,6 +45,7 @@ header{
        align-self: center;
        text-align: center;
        font-size: x-large;
+       background-color: aliceblue;
    }
    .main nav div{
        margin-top: 40px;
@@ -54,3 +62,10 @@ header{
        margin: 30px;
        text-align: start;
    }
+   .flex{
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    text-align: center;
+    font-size: x-large;
+}
