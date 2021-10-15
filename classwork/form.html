@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    header, footer{
+        background-color: darkorange;
+        height: 50px;
+    }
+    .flex-main{
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .flex-main{
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .inp-bg{
+        background-color: antiquewhite;
+        border-radius: 13px;
+        border-color: aqua;
+        width: 150px;
+        height: 25px;
+    }
+    main{
+    width: 40%;
+    margin: auto;
+    border: solid 1px red;
+    border-radius: 15px;
+    padding: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="flex-main">
+    <header>
+        <h1>Эта форма</h1>
+    </header>
+    <main>
+    <form class="border">
+        
+        <h3>Университет Дубна</h3>
+        <h4>Есть вопросы?</h4>
+<div>
+    <div>
+        Как вам удобно получить ответ: 
+    <input type="radio" id="contactChoice1"
+     name="contact" value="email">
+    <label for="contactChoice1">По почте</label>
+
+    <input type="radio" id="contactChoice2"
+     name="contact" value="phone">
+    <label for="contactChoice2">По телефону</label>
+
+    <input type="radio" id="contactChoice3"
+     name="contact" value="mail">
+    <label for="contactChoice3">По-другому</label>
+    </p>
+  </div>
+    <div>
+        Укажите тему вопроса <br>
+        <select class="inp-bg" name="обратная связь" id="1337">
+            <option value="1">
+                работа
+            </option>
+            <option value="2">
+                учёба
+            </option>
+            <option value="3">
+                баг
+            </option>
+        </select>   
+    </div>
+    <div>
+        <p><b>И ещё один вопрос</b></p>
+   <p><input type="checkbox" name="option1" value="a1">может так<Br>
+   <input type="checkbox" name="option2" value="a2">или не так<Br>
+   <input type="checkbox" name="option3" value="a3">иначе<Br> 
+   </div>
+   <div>
+   <p>Ваше имя: <input class="inp-bg" type="text"></p>
+    </div>
+    <div>
+   <p>адрес почты <input class="inp-bg" type="email"></p>
+</div>
+<div>
+   <p>телефон <input class="inp-bg" type="text"></p>
+</div>
+<div>
+   <p>Ваш вопрос</p>
+   <p><input type="text"></p>
+   <p><input type="submit" value="Отправить"></p>
+</div>
+</div>
+    </form>
+</main>
+<footer>
+    <p>Веб-технологии, задание 2</p>
+</footer>
+</div>
+</body>
+</html>

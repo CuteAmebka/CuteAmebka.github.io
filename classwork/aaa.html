@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+    display: grid; 
+    grid-template-rows: 2fr,1fr,1fr,1fr;
+    grid-template-columns: 3fr,3fr,3fr,1fr;
+    grid-template-areas: 
+    "d1 d1 d2 d7"
+    "d1 d1 d3 d7"
+    "d4 d5 d5 d7"
+    "d6 d8 d9 d7";
+    height:100vh;
+         }
+         .background{
+             background-color: darkorange;
+             margin: 5px;
+         } 
+         .d1{
+             grid-area: d1;
+         }
+         .d2{
+             grid-area: d2;
+         }
+         .d3{
+             grid-area: d3;
+         }
+         .d4{
+             grid-area: d4;
+         }
+         .d5{
+             grid-area: d5;
+         }
+         .d6{
+             grid-area: d6;
+         }
+         .d7{
+             grid-area: d7;
+         }
+         .d8{
+             grid-area: d8;
+         }
+         .d9{
+             grid-area: d9;
+         }
+      </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="d1 background"></div>
+        <div class="d2 background"></div>
+        <div class="d3 background"></div>
+        <div class="d4 background"></div>
+        <div class="d5 background"></div>
+        <div class="d6 background"></div>
+        <div class="d7 background"></div>   
+        <div class="d8 background"></div>
+        <div class="d9 background"></div>
+    </div>
+</body>
+</html>

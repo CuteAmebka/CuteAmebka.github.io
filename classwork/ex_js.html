@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .bigText{
+            font-size:xx-large;
+            margin: 0 auto;
+            color: brown;
+            width: fit-content;
+            background: cyan;
+        }
+    </style>
+
+    <script>
+        for(i=0;i<=100;i++){
+        document.writeln("Hellp world!");
+        }
+        alert("Еда!");  
+        console.log("@");
+
+        function t(){
+            document.getElementById("test").classList.toggle("bigText");
+        }
+        function changeText(){
+            document.getElementById("test").classList.add("bigText");
+        }
+
+        function normalText(){
+            document.getElementById("test").classList.remove("bigText");
+        }
+
+        function f(){
+            a=10;   
+            for(i=0;i<=a;i++){
+            document.getElementById("test").innerText += "I <3 Kirill ";
+            }
+        }
+        function d(){
+            event.currentTarget.style.display="none"; 
+        }
+
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+    <script>
+        document.write("Hellp world!");
+    </script>
+    </h1>
+
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, quam veniam! Quam eaque id iusto nam porro rerum perferendis maiores veritatis. Sapiente eum numquam amet. Praesentium nemo veniam architecto sed!
+
+    </div>
+    <button onclick="f(10000)">
+        Покормить димарика
+
+    </button>
+    <button id="btn1">
+        Покормить Кирилла
+
+    </button>
+    <button id="btn2">
+        Покормить всех
+
+    </button>
+    <button id="btn3">
+        Обычный текст
+
+    </button>
+    <button onclick="t()">
+        toggle
+
+    </button>
+    <button onclick="d()">
+        toggle
+
+    </button>
+    <div id="test">
+
+    </div>
+        <script>
+        document.getElementById("test").innerText="???"
+        document.write("Hellp world!");
+        document.getElementById("btn1").onclick = changeText;
+        document.getElementById("btn2").addEventListener('click',f);
+        document.getElementById("btn3").onclick = normalText;
+    </script>
+</body>
+</html>
