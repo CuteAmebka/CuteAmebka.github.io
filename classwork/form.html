@@ -36,6 +36,33 @@
     padding: 20px;
     }
     </style>
+    <script>
+        
+        function f(){
+            var login = document.reg.Name.value;
+            var email = document.reg.email.value;
+            var num = document.reg.nomber.value;
+            var index = document.reg.question.selectedIndex;
+            var question = document.reg.question[index].text;
+            var _text;
+            for (let i = 0; i < document.reg.contact.length; i++) {
+                if (document.reg.contact[i].checked){
+                    _text = ("Здравствуйте, "+login+" ваш емаил "+email+" ваш номер телефона "+num+" мы вышлем вам приглашение "+document.reg.contact[i].value+" и ответ на ваш вопрос по теме "+question+" ");
+                }
+                
+            }
+            if(document.reg.option1.checked){
+                _text+=document.reg.option1.value
+            }
+            if(document.reg.option2.checked){
+                _text+=document.reg.option2.value
+            }
+            if(document.reg.option3.checked){
+                _text+=document.reg.option3.value
+            }
+            console.log(_text);
+        }
+    </script>
 </head>
 <body>
     <div class="flex-main">
@@ -43,7 +70,7 @@
         <h1>Эта форма</h1>
     </header>
     <main>
-    <form class="border">
+    <form class="border" action="javascript:f()" name="reg">
         
         <h3>Университет Дубна</h3>
         <h4>Есть вопросы?</h4>
@@ -51,21 +78,21 @@
     <div>
         Как вам удобно получить ответ: 
     <input type="radio" id="contactChoice1"
-     name="contact" value="email">
+     name="contact" value="по почте">
     <label for="contactChoice1">По почте</label>
 
     <input type="radio" id="contactChoice2"
-     name="contact" value="phone">
+     name="contact" value="по телефону">
     <label for="contactChoice2">По телефону</label>
 
     <input type="radio" id="contactChoice3"
-     name="contact" value="mail">
+     name="contact" value="по-другому">
     <label for="contactChoice3">По-другому</label>
     </p>
   </div>
     <div>
         Укажите тему вопроса <br>
-        <select class="inp-bg" name="обратная связь" id="1337">
+        <select class="inp-bg" name="question" id="1337">
             <option value="1">
                 работа
             </option>
@@ -79,18 +106,21 @@
     </div>
     <div>
         <p><b>И ещё один вопрос</b></p>
-   <p><input type="checkbox" name="option1" value="a1">может так<Br>
-   <input type="checkbox" name="option2" value="a2">или не так<Br>
-   <input type="checkbox" name="option3" value="a3">иначе<Br> 
+   <input type="checkbox" name="option1" value="a1">
+   <label for="option1">может так</label><Br>
+   <input type="checkbox" name="option2" value="a2">
+   <label for="option2">или так</label><Br>
+   <input type="checkbox" name="option3" value="a3">
+   <label for="option3">иначе</label><Br>
    </div>
    <div>
-   <p>Ваше имя: <input class="inp-bg" type="text"></p>
+   <p>Ваше имя: <input class="inp-bg" type="text" name="Name"></p>
     </div>
     <div>
-   <p>адрес почты <input class="inp-bg" type="email"></p>
+   <p>адрес почты <input class="inp-bg" type="email" name="email"></p>
 </div>
 <div>
-   <p>телефон <input class="inp-bg" type="text"></p>
+   <p>телефон <input class="inp-bg" type="text" name="nomber"></p>
 </div>
 <div>
    <p>Ваш вопрос</p>
