@@ -28,6 +28,9 @@
         width: 150px;
         height: 25px;
     }
+    .hiding{
+        display: none;
+    }
     main{
     width: 40%;
     margin: auto;
@@ -35,34 +38,46 @@
     border-radius: 15px;
     padding: 20px;
     }
+    .hidden{
+        display: none;
+    }
+    .visible{
+        display: block;
+    }
     </style>
     <script>
-        
+        function hide1(){
+            console.log("hide1");
+            document.getElementById("div_email").classList.toggle("hidden");
+        }   
+        function hide2(){
+            console.log("hide1");
+            document.getElementById("div_nomber").classList.toggle("hidden");
+        }
         function f(){
-            var login = document.reg.Name.value;
-            var email = document.reg.email.value;
-            var num = document.reg.nomber.value;
-            var index = document.reg.question.selectedIndex;
-            var question = document.reg.question[index].text;
-            var _text;
+            let login = document.reg.Name.value;
+            let email = document.reg.email.value;
+            let num = document.reg.nomber.value;
+            let index = document.reg.question.selectedIndex;
+            let question = document.reg.question[index].text;
+            let _text;
             for (let i = 0; i < document.reg.contact.length; i++) {
                 if (document.reg.contact[i].checked){
                     _text = ("Здравствуйте, "+login+" ваш емаил "+email+" ваш номер телефона "+num+" мы вышлем вам приглашение "+document.reg.contact[i].value+" и ответ на ваш вопрос по теме "+question+" ");
-                }
-                
+    }                   
             }
             if(document.reg.option1.checked){
-                _text+=document.reg.option1.value
+                _text+=document.reg.option1.value;
             }
             if(document.reg.option2.checked){
-                _text+=document.reg.option2.value
+                _text+=document.reg.option2.value;
             }
             if(document.reg.option3.checked){
-                _text+=document.reg.option3.value
+                _text+=document.reg.option3.value;  
+            }   
+            document.getElementById("randomtext").innerText=_text;
             }
-            console.log(_text);
-        }
-    </script>
+        </script>
 </head>
 <body>
     <div class="flex-main">
@@ -78,11 +93,11 @@
     <div>
         Как вам удобно получить ответ: 
     <input type="radio" id="contactChoice1"
-     name="contact" value="по почте">
+     name="contact" value="по почте" onclick="hide1()">
     <label for="contactChoice1">По почте</label>
 
     <input type="radio" id="contactChoice2"
-     name="contact" value="по телефону">
+     name="contact" value="по телефону" onclick="hide2()">
     <label for="contactChoice2">По телефону</label>
 
     <input type="radio" id="contactChoice3"
@@ -108,18 +123,18 @@
         <p><b>И ещё один вопрос</b></p>
    <input type="checkbox" name="option1" value="a1">
    <label for="option1">может так</label><Br>
-   <input type="checkbox" name="option2" value="a2">
+   <input type="checkbox" name="option2" value="a2">    
    <label for="option2">или так</label><Br>
    <input type="checkbox" name="option3" value="a3">
    <label for="option3">иначе</label><Br>
    </div>
-   <div>
-   <p>Ваше имя: <input class="inp-bg" type="text" name="Name"></p>
+   <div >
+   <p>Ваше имя: <input class="inp-bg" 1 type="text" name="Name" ></p>
     </div>
-    <div>
+    <div class="hidden" id="div_email">
    <p>адрес почты <input class="inp-bg" type="email" name="email"></p>
 </div>
-<div>
+<div id="div_nomber"> 
    <p>телефон <input class="inp-bg" type="text" name="nomber"></p>
 </div>
 <div>
@@ -127,8 +142,10 @@
    <p><input type="text"></p>
    <p><input type="submit" value="Отправить"></p>
 </div>
+
 </div>
     </form>
+    <div id="randomtext"></div>
 </main>
 <footer>
     <p>Веб-технологии, задание 2</p>

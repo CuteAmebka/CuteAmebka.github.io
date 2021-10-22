@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img_cool{
+            width: 132px;
+            height: 100px;
+            margin-left: -1px;
+        }
+    </style>
+    <script>
+        function f(a){
+            document.images[0].src = document.images[a].src;
+        }
+    </script>
+</head>
+<body>
+    <div>
+    <img src="../img/index_pudge.jpg" width="400" height="300" alt="" >
+</div>
+<div>  
+    <img src="../img/sleep.jpg" class="img_cool" alt="" onclick="f(1)">
+    <img src="../img/index_pudge.jpg" class="img_cool" onclick="f(2)">
+    <img src="../img/spacebg.jpg"  class="img_cool" alt="" onclick="f(3)">
+</div>
+</body>
+</html>

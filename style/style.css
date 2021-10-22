@@ -11,6 +11,9 @@ header{
          font-style: italic;
 
      }
+     p{
+         font-size: 1.4em;
+     }
      h4{
         font-family: 'Ephesis', cursive;
      }
@@ -29,6 +32,9 @@ header{
     .wrapper{
         max-width: 1200px;
         margin: 0 auto;
+    }
+    .button_align{
+        align-self: start;
     }
     *{
         margin: 0px;
@@ -61,11 +67,18 @@ header{
        flex-grow: 5;
        margin: 30px;
        text-align: start;
+       border-left: 0ch;    
    }
    .flex{
     display: flex;
     justify-content: space-around;
     align-self: center;
     text-align: center;
+    font-size: x-large;
+}
+footer{
+    justify-content: space-around;
+    align-self: right;
+    text-align: right;
     font-size: x-large;
 }
