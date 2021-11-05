@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>  
+    <style>
+        .b{
+
+            border: solid 1px red;
+        }
+
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -14,17 +21,51 @@
     <script>
         function f(a){
             document.images[0].src = document.images[a].src;
+
         }
+        id = null;
+        a=1;
+		function f1()
+		{
+			document.images[0].src = document.images[a].src;
+            document.images[a].classList.toggle("b");
+            if(a!=1){
+                document.images[a-1].classList.toggle("b");
+            }
+            else{
+                if(document.images[3].classList.contains('b')){
+                document.images[3].classList.toggle("b");
+                }
+            }
+            if(a==3){
+                a=0;
+            }
+            a=a+1;
+            id = setTimeout("f1()", 1000);
+           
+            
+		}
+
+		function stop()
+		{
+			clearTimeout(id);   
+		}
+
+
     </script>
 </head>
 <body>
     <div>
-    <img src="../img/index_pudge.jpg" width="400" height="300" alt="" >
+    <img src="../img/index_pudge.jpg" width="400" height="300" alt="">
 </div>
 <div>  
     <img src="../img/sleep.jpg" class="img_cool" alt="" onclick="f(1)">
     <img src="../img/index_pudge.jpg" class="img_cool" onclick="f(2)">
     <img src="../img/spacebg.jpg"  class="img_cool" alt="" onclick="f(3)">
+</div>
+<div>
+    <button onclick="f1()">старт</button>
+	<button onclick="stop()">стоп</button>
 </div>
 </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <canvas id="paint" width="1000" height="1000" style = "border: red 2px solid "></canvas>
+</body>
+<script>
+    let art = document.getElementById("paint");
+    let stylish = art.getContext("2d");
+    stylish.fillStyle = "aqua";
+    stylish.fillRect(125,125,250,250);
+    stylish.moveTo(100,0);
+    stylish.lineTo(100,200);
+    stylish.stroke();
+    for (let x = 0.5; x < 1000; x += 10) {
+        stylish.moveTo(x, 0);
+        stylish.lineTo(x, 1000);
+    }
+
+    for (let y = 0.5; y < 1000; y += 10) {
+        stylish.moveTo(0, y);
+        stylish.lineTo(1000, y);
+    }
+
+    stylish.strokeStyle = "#a25f2a";
+    stylish.stroke();
+
+    </script>
+</html>
