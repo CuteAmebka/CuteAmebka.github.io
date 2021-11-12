@@ -82,3 +82,35 @@ footer{
     text-align: right;
     font-size: x-large;
 }
+
+
+
+.flex-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.inp-bg{
+    background-color: antiquewhite;
+    border-radius: 13px;
+    border-color: aqua;
+    width: 150px;
+    height: 25px;
+}
+.hidden{
+    display: none;
+}
+.visible{
+    display: block;
+}
+
+
+.img_cool{
+    width: 132px;
+    height: 100px;
+    margin-left: -1px;
+}
+.b{
+
+    border: solid 1px red;
+}

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <!--meta name="viewport" content="width=device-width, initial-scale=1.0"> -->       
     <title>JavaScript</title>
+
 </head>
 <body>
     
@@ -52,10 +53,113 @@
         </div>
     </header>
     <main>
-        <div>
-            <img src="../img/placeholder.jpg" alt="">
+        <div class="wrapper">
+            <div class="flex wrapper">
+                <div>
+         
+                    <div class="flex-form">
+                    <form class="border" action="javascript:form_out()" name="reg">
+                        
+                        <h3>Университет Дубна</h3>
+                        <h4>Есть вопросы?</h4>
+                <div>
+                    <div>
+                        Как вам удобно получить ответ: 
+                    <input type="radio" id="contactChoice1"
+                     name="contact" value="по почте" onclick="hide1()">
+                    <label for="contactChoice1">По почте</label>
+                
+                    <input type="radio" id="contactChoice2"
+                     name="contact" value="по телефону" onclick="hide2()">
+                    <label for="contactChoice2">По телефону</label>
+                
+                    <input type="radio" id="contactChoice3"
+                     name="contact" value="по-другому">
+                    <label for="contactChoice3">По-другому</label>
+                    </p>
+                  </div>
+                    <div>
+                        Укажите тему вопроса <br>
+                        <select class="inp-bg" name="question" id="1337">
+                            <option value="1">
+                                работа
+                            </option>
+                            <option value="2">
+                                учёба
+                            </option>
+                            <option value="3">
+                                баг
+                            </option>
+                        </select>   
+                    </div>
+                    <div>
+                        <p><b>И ещё один вопрос</b></p>
+                   <input type="checkbox" name="option1" value="a1">
+                   <label for="option1">может так</label><Br>
+                   <input type="checkbox" name="option2" value="a2">    
+                   <label for="option2">или так</label><Br>
+                   <input type="checkbox" name="option3" value="a3">
+                   <label for="option3">иначе</label><Br>
+                   </div>
+                   <div >
+                   <p>Ваше имя: <input class="inp-bg" 1 type="text" name="Name" ></p>
+                    </div>
+                    <div class="hidden" id="div_email">
+                   <p>адрес почты <input class="inp-bg" type="email" name="email"></p>
+                </div>
+                <div id="div_nomber" class="hidden"> 
+                   <p>телефон <input class="inp-bg" type="text" name="nomber"></p>
+                </div>
+                <div>
+                   <p>Ваш вопрос</p>
+                   <p><input type="text"></p>
+                   <p><input type="submit" value="Отправить"></p>
+                </div>
+                
+                </div>
+                    </form>
+                    <div id="randomtext"></div>
+                </div>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                        <img src="../img/index_pudge.jpg" width="400" height="300" alt="">
+                    </div>
+                    <div>  
+                        <img src="../img/sleep.jpg" class="img_cool" alt="" onclick="f(1)">
+                        <img src="../img/index_pudge.jpg" class="img_cool" onclick="f(2)">
+                        <img src="../img/spacebg.jpg"  class="img_cool" alt="" onclick="f(3)">
+                    </div>
+                    <div>
+                        <button onclick="f1()">старт</button>
+                        <button onclick="stop()">стоп</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex wrapper">
+                <div>
+                    <img src="../img/placeholder.jpg" alt="">
+                </div>
+                <div>
+                    <img src="../img/placeholder.jpg" alt="">
+                </div>
+            </div>
+            <div class="flex wrapper">
+                <div>
+                    <img src="../img/placeholder.jpg" alt="">
+                </div>
+                <div>
+                    <img src="../img/placeholder.jpg" alt="">
+                </div>
+            </div>
         </div>
+
     </main>
     </footer>
+    <script src="../Scripts/html.js">
+        
+    </script>
 </body>
 </html> 
